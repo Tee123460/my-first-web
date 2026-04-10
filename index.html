@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บอกความในใจ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="snow-container"></div>
+    
+    <div class="container">
+        <header>
+            <h1>อยากจะบอกว่า</h1>
+            <p>คือว่า...</p>
+        </header>
+        
+        <main>
+            <div class="message-box">
+                <div class="message-content">
+                    <h2>จะบอกว่า</h2>
+                    <p id="message-text">
+                        น้องเองน่ารักมาก ตอนปล่อยผมม
+                    </p>
+                    <div class="button-group">
+                        <button id="reveal-btn" class="btn-primary">เปิดดูรูปภาพ</button>
+                        <button id="change-btn" class="btn-secondary">เปลี่ยนข้อความ</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="image-modal" id="imageModal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    
+                    <!-- Puzzle Section -->
+                    <div id="puzzle-section" class="puzzle-section">
+                        <h3>🧩 แก้ปริศนาก่อนดูรูป!</h3>
+                        <p id="puzzle-question" class="puzzle-question"></p>
+                        <div class="puzzle-choices">
+                            <button class="btn-choice" data-answer="ความรักคือความเข้าใจ">💕 ความเข้าใจ</button>
+                            <button class="btn-choice" data-answer="ความรักคือความเสียสละ">💝 ความเสียสละ</button>
+                            <button class="btn-choice" data-answer="ความรักคือความใส่ใจ">💖 ความใส่ใจ</button>
+                            <button class="btn-choice" data-answer="ความรักคือความซื่อสัตย์">💗 ความซื่อสัตย์</button>
+                            <button class="btn-choice" data-answer="ความรักคือความผูกพัน">💞 ความผูกพัน</button>
+                        </div>
+                        <p id="puzzle-message" class="puzzle-message"></p>
+                        <p id="puzzle-hint" class="puzzle-hint"></p>
+                        <div class="puzzle-attempts">
+                            ครั้งที่: <span id="attempt-count">0</span> / 3
+                        </div>
+                    </div>
+                    
+                    <!-- Image Section (ซ่อนไว้ก่อน) -->
+                    <div id="image-section" class="image-section" style="display: none;">
+                        <img id="modalImage" src="" alt="รูปภาพพิเศษ">
+                        <p id="imageCaption">เลือกคำตอบของคุณ...</p>
+                        <div class="choice-buttons">
+                            <button id="love-btn" class="btn-love">❤️ รัก</button>
+                            <button id="no-love-btn" class="btn-no-love">💔 ไม่รัก</button>
+                        </div>
+                        <div class="sound-control">
+                            <button id="mute-btn" class="btn-mute">🔊 เสียง</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="memoryBox.js"></script>
+    <script src="celebrations.js"></script>
+    <script src="puzzle.js"></script>
+    <script src="sounds.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
